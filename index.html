@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Айбек & Айгерим | Ар-деко премиум</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 16px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+            -webkit-text-size-adjust: 100%;
+            position: relative;
+        }
+        
+        /* Геометрический фон */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(191, 158, 95, 0.03) 0px, rgba(191, 158, 95, 0.03) 2px, transparent 2px, transparent 8px),
+                repeating-linear-gradient(135deg, rgba(191, 158, 95, 0.03) 0px, rgba(191, 158, 95, 0.03) 2px, transparent 2px, transparent 8px);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        /* ⭐⭐⭐ ГЕРОЙ ⭐⭐⭐ */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            width: 100%;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(191, 158, 95, 0.15) 0px, rgba(191, 158, 95, 0.15) 2px, transparent 2px, transparent 8px),
+                repeating-linear-gradient(135deg, rgba(191, 158, 95, 0.15) 0px, rgba(191, 158, 95, 0.15) 2px, transparent 2px, transparent 8px);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 20px;
+            z-index: 2;
+            width: 100%;
+        }
+        
+        .hero-pre {
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            color: #bf9e5f;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .hero-names {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .hero-and {
+            font-size: clamp(2rem, 7vw, 4rem);
+            color: #bf9e5f;
+            font-weight: 400;
+        }
+        
+        .hero-date {
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            font-weight: 400;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .timer-section {
+            margin: 30px 0;
+            border: 2px solid #bf9e5f;
+            padding: clamp(15px, 3vw, 30px);
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        .timer-grid {
+            display: flex;
+            justify-content: center;
+            gap: clamp(15px, 4vw, 40px);
+            flex-wrap: wrap;
+        }
+        
+        .timer-item {
+            text-align: center;
+            min-width: 70px;
+        }
+        
+        .timer-number {
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            font-weight: 300;
+            color: #bf9e5f;
+        }
+        
+        .timer-label {
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: clamp(0.6rem, 2vw, 0.8rem);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-top: 8px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .location-badge {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            border: 2px solid #bf9e5f;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Inter', 'Arial', sans-serif;
+            letter-spacing: 2px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* ⭐⭐⭐ СЕКЦИИ ⭐⭐⭐ */
+        .section {
+            padding: 80px 0;
+            width: 100%;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            letter-spacing: 2px;
+        }
+        
+        .section-subtitle {
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #bf9e5f;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .section-divider {
+            width: 100px;
+            height: 2px;
+            background: #bf9e5f;
+            margin: 0 auto 50px;
+        }
+        
+        /* ⭐⭐⭐ ГАЛЕРЕЯ ⭐⭐⭐ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .gallery-item:hover {
+            border-color: #bf9e5f;
+            transform: scale(0.98);
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-item {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item {
+                height: 180px;
+            }
+        }
+        
+        /* ⭐⭐⭐ ПРОГРАММА ⭐⭐⭐ */
+        .timeline-section {
+            background: #fafafa;
+        }
+        
+        .timeline-grid {
+            max-width: 900px;
+            margin: 40px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .timeline-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .timeline-row.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-image {
+            flex: 0 0 120px;
+            height: 120px;
+            border-radius: 0;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #bf9e5f;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-time {
+            font-size: 1.2rem;
+            color: #bf9e5f;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .timeline-desc {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 600px) {
+            .timeline-row,
+            .timeline-row.reverse {
+                flex-direction: column;
+                text-align: center;
+            }
+            .timeline-image {
+                flex: 0 0 100px;
+                width: 100px;
+            }
+        }
+        
+        /* ⭐⭐⭐ КАЛЕНДАРЬ ⭐⭐⭐ */
+        .calendar-section {
+            background: white;
+        }
+        
+        .calendar-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            border: 2px solid #bf9e5f;
+            padding: 40px 30px;
+            background: white;
+            position: relative;
+        }
+        
+        .calendar-container::before,
+        .calendar-container::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #bf9e5f;
+        }
+        
+        .calendar-container::before {
+            top: -2px;
+            left: -2px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .calendar-container::after {
+            bottom: -2px;
+            right: -2px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .calendar-date {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #bf9e5f;
+            line-height: 1;
+        }
+        
+        .calendar-month {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+        
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-weight: 600;
+            color: #bf9e5f;
+            margin-bottom: 10px;
+        }
+        
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            font-family: 'Inter', 'Arial', sans-serif;
+        }
+        
+        .calendar-day.highlight {
+            background: #bf9e5f;
+            color: white;
+        }
+        
+        /* ⭐⭐⭐ ДРЕСС-КОД ⭐⭐⭐ */
+        .dresscode-section {
+            background: #fafafa;
+        }
+        
+        .dresscode-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .dresscode-card {
+            flex: 0 1 300px;
+            text-align: center;
+            padding: 30px 20px;
+            border: 2px solid #bf9e5f;
+            background: white;
+        }
+        
+        .dresscode-card i {
+            font-size: 3rem;
+            color: #bf9e5f;
+            margin-bottom: 20px;
+        }
+        
+        .dresscode-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .dresscode-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* ⭐⭐⭐ ФОРМА ⭐⭐⭐ */
+        .form-section {
+            background: white;
+        }
+        
+        .form-container {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border: 2px solid #bf9e5f;
+            background: white;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8e8e8;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #bf9e5f;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', 'Arial', sans-serif;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #1a1a1a;
+            color: white;
+            border: 2px solid #bf9e5f;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+            letter-spacing: 4px;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #bf9e5f;
+            color: #1a1a1a;
+        }
+        
+        /* ⭐⭐⭐ КОНТАКТЫ ⭐⭐⭐ */
+        .contact-section {
+            background: #fafafa;
+        }
+        
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-card {
+            text-align: center;
+            flex: 0 1 280px;
+            padding: 30px 20px;
+            border: 2px solid #bf9e5f;
+            background: white;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-role {
+            color: #bf9e5f;
+            margin-bottom: 15px;
+            font-family: 'Inter', 'Arial', sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        .contact-phone {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-wa {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #bf9e5f;
+            font-family: 'Inter', 'Arial', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .contact-wa:hover {
+            background: #bf9e5f;
+            color: #1a1a1a;
+        }
+        
+        .contact-organizer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #bf9e5f;
+        }
+        
+        .organizer-wa {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            border: 2px solid #bf9e5f;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        
+        /* ⭐⭐⭐ ФУТЕР ⭐⭐⭐ */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 2px solid #bf9e5f;
+        }
+        
+        .footer-names {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #bf9e5f;
+        }
+        
+        /* ⭐⭐⭐ МУЗЫКА ⭐⭐⭐ */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+        
+        .music-btn {
+            background: white;
+            border: 2px solid #bf9e5f;
+            padding: 12px 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1a1a1a;
+            font-family: 'Inter', 'Arial', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .music-btn:hover {
+            background: #bf9e5f;
+            color: white;
+        }
+        
+        @media (max-width: 600px) {
+            .music-player {
+                left: 20px;
+                right: 20px;
+            }
+            .music-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .map-buttons {
+                flex-direction: column;
+            }
+            .map-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            html { font-size: 14px; }
+            .hero-names { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-pre">ART DECO WEDDING</div>
+            <h1 class="hero-names">
+                <span>АЙБЕК</span>
+                <span class="hero-and">&</span>
+                <span>АЙГЕРИМ</span>
+            </h1>
+            <div class="hero-date">26 июня 2026</div>
+            
+            <div class="timer-section">
+                <div class="timer-grid">
+                    <div class="timer-item"><div class="timer-number" id="days">00</div><div class="timer-label">ДНЕЙ</div></div>
+                    <div class="timer-item"><div class="timer-number" id="hours">00</div><div class="timer-label">ЧАСОВ</div></div>
+                    <div class="timer-item"><div class="timer-number" id="minutes">00</div><div class="timer-label">МИНУТ</div></div>
+                    <div class="timer-item"><div class="timer-number" id="seconds">00</div><div class="timer-label">СЕКУНД</div></div>
+                </div>
+            </div>
+            
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> ОТЕЛЬ «РОЯЛЬ» • 18:00
+            </div>
+        </div>
+    </section>
+    
+    <!-- ГАЛЕРЕЯ -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Наши моменты</h2>
+            <div class="section-subtitle">GALLERY</div>
+            <div class="section-divider"></div>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=500');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1522673607200-164d1b3ce470?w=500');"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ПРОГРАММА -->
+    <section class="timeline-section section">
+        <div class="container">
+            <h2 class="section-title">Программа дня</h2>
+            <div class="section-subtitle">SCHEDULE</div>
+            <div class="section-divider"></div>
+            
+            <div class="timeline-grid">
+                <div class="timeline-row">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=200');"></div>
+                    <div class="timeline-content"><div class="timeline-time">18:00</div><div class="timeline-title">Сбор гостей</div><div class="timeline-desc">Приветственный фуршет</div></div>
+                </div>
+                <div class="timeline-row reverse">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=200');"></div>
+                    <div class="timeline-content"><div class="timeline-time">19:00</div><div class="timeline-title">Церемония</div><div class="timeline-desc">Обмен кольцами</div></div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=200');"></div>
+                    <div class="timeline-content"><div class="timeline-time">20:00</div><div class="timeline-title">Банкет</div><div class="timeline-desc">Ужин</div></div>
+                </div>
+                <div class="timeline-row reverse">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=200');"></div>
+                    <div class="timeline-content"><div class="timeline-time">22:00</div><div class="timeline-title">Танцы</div><div class="timeline-desc">DJ</div></div>
+                </div>
+                <div class="timeline-row">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200');"></div>
+                    <div class="timeline-content"><div class="timeline-time">23:00</div><div class="timeline-title">Торт</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- КАЛЕНДАРЬ -->
+    <section class="calendar-section section">
+        <div class="container">
+            <h2 class="section-title">Календарь</h2>
+            <div class="section-subtitle">DATE</div>
+            <div class="section-divider"></div>
+            <div class="calendar-container">
+                <div class="calendar-date">26</div>
+                <div class="calendar-month">ИЮНЯ 2026</div>
+                <div class="calendar-weekdays">
+                    <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+                </div>
+                <div class="calendar-days">
+                    <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+                    <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+                    <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
+                    <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div class="calendar-day highlight">26</div>
+                    <div>27</div><div>28</div><div>29</div><div>30</div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ДРЕСС-КОД -->
+    <section class="dresscode-section section">
+        <div class="container">
+            <h2 class="section-title">Дресс-код</h2>
+            <div class="section-subtitle">DRESS CODE</div>
+            <div class="section-divider"></div>
+            <div class="dresscode-grid">
+                <div class="dresscode-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Мужчины</h3>
+                    <p>Классические костюмы<br>Черный/серый</p>
+                </div>
+                <div class="dresscode-card">
+                    <i class="fas fa-female"></i>
+                    <h3>Дамы</h3>
+                    <p>Вечерние платья<br>Длинные, элегантные</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- МЕСТО ПРОВЕДЕНИЯ -->
+    <section class="venue-section section">
+        <div class="container">
+            <h2 class="section-title">Место проведения</h2>
+            <div class="section-subtitle">VENUE</div>
+            <div class="section-divider"></div>
+            
+            <div class="venue-card">
+                <div class="venue-name">ОТЕЛЬ «РОЯЛЬ»</div>
+                <div class="venue-address">г. Алматы, пр. Достык, 150</div>
+                <div class="venue-time">18:00</div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b8c8d8e8f8a8b8c8d8e8f8a8b8c8d8e8f8a8b&source=constructor"></iframe>
+            </div>
+            
+            <div class="map-buttons">
+                <a href="#" class="map-btn"><i class="fas fa-map"></i> Яндекс</a>
+                <a href="#" class="map-btn"><i class="fab fa-google"></i> Google</a>
+                <a href="#" class="map-btn"><i class="fas fa-location-dot"></i> 2GIS</a>
+            </div>
+            
+            <div class="rsvp-box">
+                <div class="rsvp-title">ПОДТВЕРДИТЕ УЧАСТИЕ</div>
+                <a href="tel:+77771234567" class="rsvp-button">
+                    <i class="fas fa-phone-alt"></i> +7 (777) 123-45-67
+                </a>
+                <div class="organizer-name">Айгуль, организатор</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- КОНТАКТЫ -->
+    <section class="contact-section section">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="section-subtitle">CONTACT</div>
+            <div class="section-divider"></div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Айбек</h3>
+                    <div class="contact-role">ЖЕНИХ</div>
+                    <div class="contact-phone">+7 (777) 111-22-33</div>
+                    <a href="#" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Айгерим</h3>
+                    <div class="contact-role">НЕВЕСТА</div>
+                    <div class="contact-phone">+7 (777) 444-55-66</div>
+                    <a href="#" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="contact-organizer">
+                <p>Организатор: Айгуль</p>
+                <a href="#" class="organizer-wa"><i class="fab fa-whatsapp"></i> +7 (777) 123-45-67</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="footer-names">АЙБЕК ✦ АЙГЕРИМ</div>
+        <div>26 июня 2026 • Алматы</div>
+        <div style="margin-top: 30px;">Элегантность вне времени</div>
+    </footer>
+    
+    <!-- МУЗЫКА -->
+    <div class="music-player">
+        <button class="music-btn" id="musicToggle">
+            <i class="fas fa-music"></i> <span>Джаз</span>
+        </button>
+        <audio id="bgMusic" loop src="https://assets.mixkit.co/music/672/672.mp3"></audio>
+    </div>
+    
+    <script>
+        function updateTimer() {
+            const wedding = new Date('2026-06-26T18:00:00').getTime();
+            const now = new Date().getTime();
+            const diff = wedding - now;
+            document.getElementById('days').textContent = Math.floor(diff/(1000*60*60*24)).toString().padStart(2,'0');
+            document.getElementById('hours').textContent = Math.floor((diff%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
+            document.getElementById('minutes').textContent = Math.floor((diff%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
+            document.getElementById('seconds').textContent = Math.floor((diff%(1000*60))/1000).toString().padStart(2,'0');
+        }
+        updateTimer();
+        setInterval(updateTimer, 1000);
+        
+        let playing = false;
+        const music = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicToggle');
+        btn.addEventListener('click', () => {
+            if(playing) { music.pause(); btn.innerHTML = '<i class="fas fa-music"></i> <span>Джаз</span>'; }
+            else { music.play(); btn.innerHTML = '<i class="fas fa-pause"></i> <span>Пауза</span>'; }
+            playing = !playing;
+        });
+    </script>
+</body>
+</html>
