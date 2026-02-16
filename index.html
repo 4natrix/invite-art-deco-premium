@@ -125,6 +125,7 @@
             color: rgba(255,255,255,0.9);
         }
         
+        /* ⭐⭐⭐ ТАЙМЕР ⭐⭐⭐ */
         .timer-section {
             margin: 30px 0;
             border: 2px solid #bf9e5f;
@@ -207,11 +208,11 @@
             margin: 0 auto 50px;
         }
         
-        /* ⭐⭐⭐ ГАЛЕРЕЯ ⭐⭐⭐ */
+        /* ⭐⭐⭐ ГАЛЕРЕЯ (ФОТО В СТИЛЕ АР-ДЕКО) ⭐⭐⭐ */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 2px;
+            gap: 10px;
             margin-top: 40px;
         }
         
@@ -220,11 +221,24 @@
             background-size: cover;
             background-position: center;
             transition: all 0.3s;
-            border: 2px solid transparent;
+            border: 2px solid #bf9e5f;
+            filter: grayscale(70%);
+            position: relative;
+        }
+        
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.3);
+            pointer-events: none;
         }
         
         .gallery-item:hover {
-            border-color: #bf9e5f;
+            filter: grayscale(0%);
             transform: scale(0.98);
         }
         
@@ -246,7 +260,7 @@
             }
         }
         
-        /* ⭐⭐⭐ ПРОГРАММА ⭐⭐⭐ */
+        /* ⭐⭐⭐ ПРОГРАММА (СЛЕВА/СПРАВА) ⭐⭐⭐ */
         .timeline-section {
             background: #fafafa;
         }
@@ -276,6 +290,19 @@
             background-size: cover;
             background-position: center;
             border: 2px solid #bf9e5f;
+            filter: grayscale(50%);
+            position: relative;
+        }
+        
+        .timeline-image::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.3);
+            pointer-events: none;
         }
         
         .timeline-content {
@@ -312,7 +339,7 @@
             }
         }
         
-        /* ⭐⭐⭐ КАЛЕНДАРЬ ⭐⭐⭐ */
+        /* ⭐⭐⭐ КАЛЕНДАРЬ (АР-ДЕКО СТИЛЬ) ⭐⭐⭐ */
         .calendar-section {
             background: white;
         }
@@ -380,6 +407,10 @@
             font-family: 'Inter', 'Arial', sans-serif;
         }
         
+        .calendar-day {
+            padding: 5px;
+        }
+        
         .calendar-day.highlight {
             background: #bf9e5f;
             color: white;
@@ -404,6 +435,18 @@
             padding: 30px 20px;
             border: 2px solid #bf9e5f;
             background: white;
+            position: relative;
+        }
+        
+        .dresscode-card::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.2);
+            pointer-events: none;
         }
         
         .dresscode-card i {
@@ -433,6 +476,18 @@
             padding: 50px 40px;
             border: 2px solid #bf9e5f;
             background: white;
+            position: relative;
+        }
+        
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.2);
+            pointer-events: none;
         }
         
         .form-group {
@@ -489,6 +544,67 @@
             color: #1a1a1a;
         }
         
+        /* ⭐⭐⭐ МЕСТО ПРОВЕДЕНИЯ ⭐⭐⭐ */
+        .venue-section {
+            background: #fafafa;
+        }
+        
+        .venue-card {
+            text-align: center;
+            margin-bottom: 40px;
+            border: 2px solid #bf9e5f;
+            padding: 40px;
+            background: white;
+            position: relative;
+        }
+        
+        .venue-card::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.2);
+        }
+        
+        .map-container {
+            margin: 40px 0;
+            border: 2px solid #bf9e5f;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+        
+        .map-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .map-btn {
+            font-family: 'Inter', 'Arial', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid #bf9e5f;
+            text-decoration: none;
+            color: #1a1a1a;
+            transition: all 0.3s;
+        }
+        
+        .map-btn:hover {
+            background: #bf9e5f;
+            color: white;
+        }
+        
         /* ⭐⭐⭐ КОНТАКТЫ ⭐⭐⭐ */
         .contact-section {
             background: #fafafa;
@@ -508,6 +624,17 @@
             padding: 30px 20px;
             border: 2px solid #bf9e5f;
             background: white;
+            position: relative;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.2);
         }
         
         .contact-card h3 {
@@ -562,6 +689,11 @@
             margin-top: 15px;
         }
         
+        .organizer-wa:hover {
+            background: #bf9e5f;
+            color: #1a1a1a;
+        }
+        
         /* ⭐⭐⭐ ФУТЕР ⭐⭐⭐ */
         footer {
             background: #1a1a1a;
@@ -577,7 +709,7 @@
             color: #bf9e5f;
         }
         
-        /* ⭐⭐⭐ МУЗЫКА ⭐⭐⭐ */
+        /* ⭐⭐⭐ КРУГЛАЯ КНОПКА МУЗЫКИ ⭐⭐⭐ */
         .music-player {
             position: fixed;
             bottom: 30px;
@@ -586,44 +718,77 @@
         }
         
         .music-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             background: white;
             border: 2px solid #bf9e5f;
-            padding: 12px 25px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: center;
             color: #1a1a1a;
-            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 1.5rem;
             transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .music-btn:hover {
             background: #bf9e5f;
             color: white;
+            transform: scale(1.1);
+        }
+        
+        .music-btn span {
+            display: none;
         }
         
         @media (max-width: 600px) {
-            .music-player {
-                left: 20px;
-                right: 20px;
+            .hero-names {
+                flex-direction: column;
             }
-            .music-btn {
-                width: 100%;
-                justify-content: center;
+            
+            .hero-and {
+                margin: 5px 0;
             }
+            
             .map-buttons {
                 flex-direction: column;
             }
+            
             .map-btn {
                 width: 100%;
                 justify-content: center;
+            }
+            
+            .rsvp-button {
+                width: 100%;
+            }
+            
+            .music-player {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .music-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .contact-grid {
+                gap: 30px;
+            }
+            
+            .contact-card {
+                flex: 0 1 100%;
             }
         }
         
         @media (max-width: 480px) {
             html { font-size: 14px; }
             .hero-names { font-size: 2.5rem; }
+            .calendar-date { font-size: 3rem; }
         }
     </style>
 </head>
@@ -695,7 +860,7 @@
                 </div>
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">23:00</div><div class="timeline-title">Торт</div></div>
+                    <div class="timeline-content"><div class="timeline-time">23:00</div><div class="timeline-title">Торт</div><div class="timeline-desc">Свадебный торт</div></div>
                 </div>
             </div>
         </div>
@@ -714,11 +879,11 @@
                     <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
                 </div>
                 <div class="calendar-days">
-                    <div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
-                    <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
-                    <div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div>
-                    <div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div class="calendar-day highlight">26</div>
-                    <div>27</div><div>28</div><div>29</div><div>30</div><div></div><div></div>
+                    <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day highlight">26</div>
+                    <div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day"></div><div class="calendar-day"></div>
                 </div>
             </div>
         </div>
@@ -755,7 +920,7 @@
             <div class="venue-card">
                 <div class="venue-name">ОТЕЛЬ «РОЯЛЬ»</div>
                 <div class="venue-address">г. Алматы, пр. Достык, 150</div>
-                <div class="venue-time">18:00</div>
+                <div class="venue-time">СБОР ГОСТЕЙ В 18:00</div>
             </div>
             
             <div class="map-container">
@@ -763,17 +928,46 @@
             </div>
             
             <div class="map-buttons">
-                <a href="#" class="map-btn"><i class="fas fa-map"></i> Яндекс</a>
-                <a href="#" class="map-btn"><i class="fab fa-google"></i> Google</a>
-                <a href="#" class="map-btn"><i class="fas fa-location-dot"></i> 2GIS</a>
+                <a href="https://yandex.ru/maps/?text=Алматы%20Достык%20150" target="_blank" class="map-btn"><i class="fas fa-map"></i> Яндекс</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Достык+150+Алматы" target="_blank" class="map-btn"><i class="fab fa-google"></i> Google</a>
+                <a href="https://2gis.kz/almaty/search/Достык%20150" target="_blank" class="map-btn"><i class="fas fa-location-dot"></i> 2GIS</a>
             </div>
+        </div>
+    </section>
+    
+    <!-- ФОРМА -->
+    <section class="form-section section">
+        <div class="container">
+            <h2 class="section-title">Подтвердите участие</h2>
+            <div class="section-subtitle">RSVP</div>
+            <div class="section-divider"></div>
             
-            <div class="rsvp-box">
-                <div class="rsvp-title">ПОДТВЕРДИТЕ УЧАСТИЕ</div>
-                <a href="tel:+77771234567" class="rsvp-button">
-                    <i class="fas fa-phone-alt"></i> +7 (777) 123-45-67
-                </a>
-                <div class="organizer-name">Айгуль, организатор</div>
+            <div class="form-container">
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Ваше имя и фамилия *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Номер телефона *" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="guests">
+                            <option>1 гость</option>
+                            <option>2 гостя</option>
+                            <option>3 гостя</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" id="diet1" value="veg"> Вегетарианское</label>
+                        <label class="checkbox-label"><input type="checkbox" id="diet2" value="allergy"> Аллергия</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Пожелания"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                </form>
+                <div id="formResponse" style="margin-top: 20px;"></div>
             </div>
         </div>
     </section>
@@ -790,19 +984,19 @@
                     <h3>Айбек</h3>
                     <div class="contact-role">ЖЕНИХ</div>
                     <div class="contact-phone">+7 (777) 111-22-33</div>
-                    <a href="#" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://wa.me/77771112233" target="_blank" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
                 <div class="contact-card">
                     <h3>Айгерим</h3>
                     <div class="contact-role">НЕВЕСТА</div>
                     <div class="contact-phone">+7 (777) 444-55-66</div>
-                    <a href="#" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://wa.me/77774445566" target="_blank" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
             
             <div class="contact-organizer">
                 <p>Организатор: Айгуль</p>
-                <a href="#" class="organizer-wa"><i class="fab fa-whatsapp"></i> +7 (777) 123-45-67</a>
+                <a href="https://wa.me/77771234567" target="_blank" class="organizer-wa"><i class="fab fa-whatsapp"></i> +7 (777) 123-45-67</a>
             </div>
         </div>
     </section>
@@ -817,9 +1011,11 @@
     <!-- МУЗЫКА -->
     <div class="music-player">
         <button class="music-btn" id="musicToggle">
-            <i class="fas fa-music"></i> <span>Джаз</span>
+            <i class="fas fa-music"></i>
         </button>
-        <audio id="bgMusic" loop src="https://assets.mixkit.co/music/672/672.mp3"></audio>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="https://assets.mixkit.co/music/672/672.mp3" type="audio/mpeg">
+        </audio>
     </div>
     
     <script>
@@ -835,13 +1031,81 @@
         updateTimer();
         setInterval(updateTimer, 1000);
         
-        let playing = false;
+        // МУЗЫКА С ПЛАВНЫМ НАРАСТАНИЕМ
+        let isPlaying = false;
         const music = document.getElementById('bgMusic');
         const btn = document.getElementById('musicToggle');
+        
+        music.volume = 0;
+        
+        function fadeIn() {
+            let volume = 0;
+            const interval = setInterval(() => {
+                if (volume < 1) {
+                    volume += 0.05;
+                    music.volume = volume;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+        
         btn.addEventListener('click', () => {
-            if(playing) { music.pause(); btn.innerHTML = '<i class="fas fa-music"></i> <span>Джаз</span>'; }
-            else { music.play(); btn.innerHTML = '<i class="fas fa-pause"></i> <span>Пауза</span>'; }
-            playing = !playing;
+            if (isPlaying) {
+                music.pause();
+                btn.innerHTML = '<i class="fas fa-music"></i>';
+            } else {
+                music.play();
+                fadeIn();
+                btn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        window.addEventListener('load', () => {
+            music.play().then(() => {
+                isPlaying = true;
+                btn.innerHTML = '<i class="fas fa-pause"></i>';
+                fadeIn();
+            }).catch(() => {});
+        });
+        
+        // ФОРМА (ДЛЯ GOOGLE APPS SCRIPT)
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/ВАША_ССЫЛКА/exec';
+        
+        document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = 'Отправка...';
+            submitBtn.disabled = true;
+            
+            const diet = [];
+            if (document.getElementById('diet1').checked) diet.push('Вегетарианское');
+            if (document.getElementById('diet2').checked) diet.push('Аллергия');
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                guests: document.getElementById('guests').value,
+                diet: diet.join(', '),
+                message: document.getElementById('message').value,
+                wedding: 'Ар-деко свадьба 26.06.2026'
+            };
+            
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                document.getElementById('formResponse').innerHTML = '<div style="color: #bf9e5f;">Спасибо! Ждем вас ✨</div>';
+                this.reset();
+            } catch (error) {
+                document.getElementById('formResponse').innerHTML = '<div style="color: #b85c38;">Ошибка. Позвоните нам.</div>';
+            }
+            submitBtn.innerHTML = 'ОТПРАВИТЬ';
+            submitBtn.disabled = false;
         });
     </script>
 </body>
