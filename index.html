@@ -40,8 +40,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, rgba(191, 158, 95, 0.03) 0px, rgba(191, 158, 95, 0.03) 2px, transparent 2px, transparent 8px),
-                repeating-linear-gradient(135deg, rgba(191, 158, 95, 0.03) 0px, rgba(191, 158, 95, 0.03) 2px, transparent 2px, transparent 8px);
+                repeating-linear-gradient(45deg, rgba(181, 151, 91, 0.03) 0px, rgba(181, 151, 91, 0.03) 2px, transparent 2px, transparent 8px),
+                repeating-linear-gradient(135deg, rgba(181, 151, 91, 0.03) 0px, rgba(181, 151, 91, 0.03) 2px, transparent 2px, transparent 8px);
             pointer-events: none;
             z-index: -1;
         }
@@ -78,8 +78,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                repeating-linear-gradient(45deg, rgba(191, 158, 95, 0.15) 0px, rgba(191, 158, 95, 0.15) 2px, transparent 2px, transparent 8px),
-                repeating-linear-gradient(135deg, rgba(191, 158, 95, 0.15) 0px, rgba(191, 158, 95, 0.15) 2px, transparent 2px, transparent 8px);
+                repeating-linear-gradient(45deg, rgba(181, 151, 91, 0.15) 0px, rgba(181, 151, 91, 0.15) 2px, transparent 2px, transparent 8px),
+                repeating-linear-gradient(135deg, rgba(181, 151, 91, 0.15) 0px, rgba(181, 151, 91, 0.15) 2px, transparent 2px, transparent 8px);
             pointer-events: none;
         }
         
@@ -95,7 +95,7 @@
             font-size: clamp(0.7rem, 2vw, 0.9rem);
             letter-spacing: 8px;
             margin-bottom: 20px;
-            color: #bf9e5f;
+            color: #b5975b;
             text-transform: uppercase;
             font-weight: 500;
         }
@@ -114,7 +114,7 @@
         
         .hero-and {
             font-size: clamp(2rem, 7vw, 4rem);
-            color: #bf9e5f;
+            color: #b5975b;
             font-weight: 400;
             font-style: italic;
         }
@@ -130,7 +130,7 @@
         /* ⭐⭐⭐ ТАЙМЕР ⭐⭐⭐ */
         .timer-section {
             margin: 30px 0;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             padding: clamp(15px, 3vw, 30px);
             background: rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
@@ -152,7 +152,7 @@
             font-family: 'Inter', 'Arial', sans-serif;
             font-size: clamp(2rem, 6vw, 3.2rem);
             font-weight: 300;
-            color: #bf9e5f;
+            color: #b5975b;
         }
         
         .timer-label {
@@ -168,7 +168,7 @@
             display: inline-block;
             margin-top: 30px;
             padding: 12px 30px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             color: white;
             font-size: 1rem;
             font-family: 'Inter', 'Arial', sans-serif;
@@ -196,7 +196,7 @@
             font-family: 'Inter', 'Arial', sans-serif;
             font-size: 0.8rem;
             text-align: center;
-            color: #bf9e5f;
+            color: #b5975b;
             letter-spacing: 6px;
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -206,7 +206,7 @@
         .section-divider {
             width: 100px;
             height: 2px;
-            background: #bf9e5f;
+            background: #b5975b;
             margin: 0 auto 50px;
         }
         
@@ -223,7 +223,7 @@
             background-size: cover;
             background-position: center;
             transition: all 0.3s;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             filter: grayscale(70%);
             position: relative;
         }
@@ -235,7 +235,7 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.3);
+            border: 1px solid rgba(181, 151, 91, 0.3);
             pointer-events: none;
         }
         
@@ -262,7 +262,7 @@
             }
         }
         
-        /* ⭐⭐⭐ ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА (ИСПРАВЛЕНО) ⭐⭐⭐ */
+        /* ⭐⭐⭐ ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА ⭐⭐⭐ */
         .timeline-section {
             background: #fafafa;
         }
@@ -290,7 +290,7 @@
             height: 150px;
             background-size: cover;
             background-position: center;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             filter: grayscale(50%);
             position: relative;
         }
@@ -302,7 +302,7 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.3);
+            border: 1px solid rgba(181, 151, 91, 0.3);
             pointer-events: none;
         }
         
@@ -312,7 +312,7 @@
         
         .timeline-time {
             font-size: 1.3rem;
-            color: #bf9e5f;
+            color: #b5975b;
             font-weight: 600;
             margin-bottom: 5px;
             font-family: 'Inter', 'Arial', sans-serif;
@@ -331,55 +331,21 @@
             line-height: 1.6;
         }
         
-        /* ⭐⭐ АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА — СОХРАНЯЕМ СЛЕВА/СПРАВА ⭐⭐ */
         @media (max-width: 768px) {
             .timeline-row,
             .timeline-row.reverse {
                 gap: 20px;
             }
-            
             .timeline-image {
                 flex: 0 0 100px;
                 height: 100px;
             }
-            
             .timeline-title {
                 font-size: 1.4rem;
             }
-            
-            .timeline-time {
-                font-size: 1.1rem;
-            }
-            
-            .timeline-desc {
-                font-size: 0.9rem;
-            }
         }
         
-        @media (max-width: 600px) {
-            .timeline-row,
-            .timeline-row.reverse {
-                gap: 15px;
-            }
-            
-            .timeline-image {
-                flex: 0 0 80px;
-                height: 80px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .timeline-image {
-                flex: 0 0 70px;
-                height: 70px;
-            }
-            
-            .timeline-title {
-                font-size: 1.2rem;
-            }
-        }
-        
-        /* ⭐⭐⭐ КАЛЕНДАРЬ АР-ДЕКО ⭐⭐⭐ */
+        /* ⭐⭐⭐ КАЛЕНДАРЬ АР-ДЕКО С ЗОЛОТЫМ СЕРДЕЧКОМ ⭐⭐⭐ */
         .calendar-section {
             background: white;
         }
@@ -388,7 +354,7 @@
             max-width: 500px;
             margin: 0 auto;
             text-align: center;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             padding: 50px 40px;
             background: white;
             position: relative;
@@ -401,7 +367,7 @@
             position: absolute;
             width: 60px;
             height: 60px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             opacity: 0.5;
         }
         
@@ -419,7 +385,6 @@
             border-top: none;
         }
         
-        /* Внутренняя рамка */
         .calendar-inner {
             position: relative;
             padding: 20px;
@@ -431,7 +396,7 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            border: 1px solid rgba(191, 158, 95, 0.3);
+            border: 1px solid rgba(181, 151, 91, 0.3);
         }
         
         .calendar-inner::before {
@@ -451,7 +416,7 @@
         .calendar-date {
             font-size: 4rem;
             font-weight: 700;
-            color: #bf9e5f;
+            color: #b5975b;
             line-height: 1;
             margin-bottom: 5px;
         }
@@ -469,7 +434,7 @@
             gap: 5px;
             font-family: 'Inter', 'Arial', sans-serif;
             font-weight: 600;
-            color: #bf9e5f;
+            color: #b5975b;
             margin-bottom: 10px;
             text-transform: uppercase;
             font-size: 0.8rem;
@@ -485,13 +450,44 @@
         .calendar-day {
             padding: 8px 5px;
             font-size: 0.9rem;
+            position: relative;
         }
         
+        /* ⭐ ЗОЛОТОЕ СЕРДЕЧКО ВОКРУГ ЧИСЛА 26 ⭐ */
         .calendar-day.highlight {
-            background: #bf9e5f;
+            position: relative;
             color: white;
-            border-radius: 0;
             font-weight: 600;
+            z-index: 1;
+        }
+        
+        .calendar-day.highlight::before {
+            content: '❤️';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2.2rem;
+            color: #b5975b;
+            z-index: -1;
+            opacity: 1;
+        }
+        
+        .calendar-day.highlight::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #b5975b;
+            z-index: -2;
+        }
+        
+        .calendar-day.highlight span {
+            position: relative;
+            z-index: 2;
+            color: white;
         }
         
         .calendar-time-info {
@@ -505,7 +501,7 @@
         }
         
         .calendar-time-info span {
-            color: #bf9e5f;
+            color: #b5975b;
             font-weight: 600;
         }
         
@@ -526,7 +522,7 @@
             flex: 0 1 300px;
             text-align: center;
             padding: 40px 30px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             background: white;
             position: relative;
         }
@@ -538,13 +534,13 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.2);
+            border: 1px solid rgba(181, 151, 91, 0.2);
             pointer-events: none;
         }
         
         .dresscode-icon {
             font-size: 3rem;
-            color: #bf9e5f;
+            color: #b5975b;
             margin-bottom: 20px;
         }
         
@@ -569,7 +565,7 @@
         .venue-card {
             text-align: center;
             margin-bottom: 40px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             padding: 50px 40px;
             background: white;
             position: relative;
@@ -582,7 +578,7 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.2);
+            border: 1px solid rgba(181, 151, 91, 0.2);
         }
         
         .venue-name {
@@ -599,7 +595,7 @@
         }
         
         .venue-time {
-            color: #bf9e5f;
+            color: #b5975b;
             font-size: 1rem;
             font-family: 'Inter', 'Arial', sans-serif;
             letter-spacing: 2px;
@@ -607,7 +603,7 @@
         
         .map-container {
             margin: 40px 0;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
         }
         
         .map-container iframe {
@@ -631,7 +627,7 @@
             gap: 8px;
             padding: 12px 30px;
             background: transparent;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             text-decoration: none;
             color: #1a1a1a;
             transition: all 0.3s;
@@ -640,7 +636,7 @@
         }
         
         .map-btn:hover {
-            background: #bf9e5f;
+            background: #b5975b;
             color: white;
         }
         
@@ -653,7 +649,7 @@
             max-width: 550px;
             margin: 0 auto;
             padding: 60px 50px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             background: white;
             position: relative;
         }
@@ -665,7 +661,7 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.2);
+            border: 1px solid rgba(181, 151, 91, 0.2);
             pointer-events: none;
         }
         
@@ -699,7 +695,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #bf9e5f;
+            border-color: #b5975b;
             background: white;
         }
         
@@ -721,7 +717,7 @@
         .checkbox-label input[type="checkbox"] {
             width: 18px;
             height: 18px;
-            accent-color: #bf9e5f;
+            accent-color: #b5975b;
         }
         
         .submit-btn {
@@ -729,7 +725,7 @@
             padding: 16px;
             background: #1a1a1a;
             color: white;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             font-family: 'Inter', 'Arial', sans-serif;
             font-size: 1.1rem;
             cursor: pointer;
@@ -739,7 +735,7 @@
         }
         
         .submit-btn:hover {
-            background: #bf9e5f;
+            background: #b5975b;
             color: #1a1a1a;
         }
         
@@ -760,7 +756,7 @@
             text-align: center;
             flex: 0 1 280px;
             padding: 40px 30px;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             background: white;
             position: relative;
         }
@@ -772,7 +768,7 @@
             left: 5px;
             right: 5px;
             bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.2);
+            border: 1px solid rgba(181, 151, 91, 0.2);
         }
         
         .contact-card h3 {
@@ -783,7 +779,7 @@
         }
         
         .contact-role {
-            color: #bf9e5f;
+            color: #b5975b;
             margin-bottom: 15px;
             font-family: 'Inter', 'Arial', sans-serif;
             letter-spacing: 2px;
@@ -802,14 +798,14 @@
             background: #1a1a1a;
             color: white;
             text-decoration: none;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             font-family: 'Inter', 'Arial', sans-serif;
             transition: all 0.3s;
             font-size: 0.9rem;
         }
         
         .contact-wa:hover {
-            background: #bf9e5f;
+            background: #b5975b;
             color: #1a1a1a;
         }
         
@@ -817,7 +813,7 @@
             text-align: center;
             margin-top: 50px;
             padding-top: 30px;
-            border-top: 2px solid #bf9e5f;
+            border-top: 2px solid #b5975b;
         }
         
         .organizer-wa {
@@ -826,7 +822,7 @@
             background: #1a1a1a;
             color: white;
             text-decoration: none;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             font-family: 'Inter', 'Arial', sans-serif;
             font-size: 1rem;
             margin-top: 15px;
@@ -834,7 +830,7 @@
         }
         
         .organizer-wa:hover {
-            background: #bf9e5f;
+            background: #b5975b;
             color: #1a1a1a;
         }
         
@@ -844,13 +840,13 @@
             color: white;
             text-align: center;
             padding: 60px 20px;
-            border-top: 2px solid #bf9e5f;
+            border-top: 2px solid #b5975b;
         }
         
         .footer-names {
             font-size: 2.2rem;
             margin-bottom: 15px;
-            color: #bf9e5f;
+            color: #b5975b;
             font-weight: 600;
             font-style: italic;
         }
@@ -863,7 +859,7 @@
         
         .footer-quote {
             font-style: italic;
-            color: rgba(191, 158, 95, 0.8);
+            color: rgba(181, 151, 91, 0.8);
         }
         
         /* ⭐⭐⭐ КРУГЛАЯ КНОПКА МУЗЫКИ ⭐⭐⭐ */
@@ -879,7 +875,7 @@
             height: 60px;
             border-radius: 50%;
             background: white;
-            border: 2px solid #bf9e5f;
+            border: 2px solid #b5975b;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -891,7 +887,7 @@
         }
         
         .music-btn:hover {
-            background: #bf9e5f;
+            background: #b5975b;
             color: white;
             transform: scale(1.1);
         }
@@ -910,10 +906,6 @@
                 padding: 60px 0;
             }
             
-            .form-container {
-                padding: 40px 30px;
-            }
-            
             .calendar-container {
                 padding: 40px 30px;
             }
@@ -924,10 +916,6 @@
             
             .calendar-month {
                 font-size: 1.6rem;
-            }
-            
-            .contact-grid {
-                gap: 30px;
             }
         }
         
@@ -971,11 +959,6 @@
                 font-size: 1.2rem;
             }
             
-            .checkbox-group {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
             .calendar-time-info {
                 flex-direction: column;
                 gap: 10px;
@@ -985,14 +968,7 @@
         @media (max-width: 480px) {
             html { font-size: 14px; }
             .hero-names { font-size: 2.5rem; }
-            .venue-name { font-size: 1.8rem; }
             .calendar-date { font-size: 2.5rem; }
-            .calendar-month { font-size: 1.4rem; }
-        }
-        
-        h1, h2, h3, p, div, span, a {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
     </style>
 </head>
@@ -1038,7 +1014,7 @@
         </div>
     </section>
     
-    <!-- ⭐⭐⭐ ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА ⭐⭐⭐ -->
+    <!-- ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА -->
     <section class="timeline-section section">
         <div class="container">
             <h2 class="section-title">Программа дня</h2>
@@ -1046,70 +1022,59 @@
             <div class="section-divider"></div>
             
             <div class="timeline-grid">
-                <!-- 1. Сбор гостей - слева -->
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">18:00</div>
                         <h3 class="timeline-title">Сбор гостей</h3>
-                        <div class="timeline-desc">Приветственный фуршет, шампанское, первые встречи</div>
+                        <div class="timeline-desc">Приветственный фуршет, шампанское</div>
                     </div>
                 </div>
-                
-                <!-- 2. Фотосессия - справа -->
                 <div class="timeline-row reverse">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">18:30</div>
                         <h3 class="timeline-title">Фотосессия</h3>
-                        <div class="timeline-desc">Совместные фотографии в интерьерах отеля</div>
+                        <div class="timeline-desc">Совместные фотографии</div>
                     </div>
                 </div>
-                
-                <!-- 3. Торжественная церемония - слева -->
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">19:00</div>
                         <h3 class="timeline-title">Церемония</h3>
-                        <div class="timeline-desc">Обмен кольцами, первые поздравления</div>
+                        <div class="timeline-desc">Обмен кольцами</div>
                     </div>
                 </div>
-                
-                <!-- 4. Банкет - справа -->
                 <div class="timeline-row reverse">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">20:00</div>
                         <h3 class="timeline-title">Банкет</h3>
-                        <div class="timeline-desc">Ужин в стиле Ар-деко, тосты, поздравления</div>
+                        <div class="timeline-desc">Ужин в стиле Ар-деко</div>
                     </div>
                 </div>
-                
-                <!-- 5. Танцы - слева -->
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">22:00</div>
                         <h3 class="timeline-title">Танцы</h3>
-                        <div class="timeline-desc">Первый танец, дискотека, джаз</div>
+                        <div class="timeline-desc">Первый танец, джаз</div>
                     </div>
                 </div>
-                
-                <!-- 6. Торт - справа -->
                 <div class="timeline-row reverse">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200');"></div>
                     <div class="timeline-content">
                         <div class="timeline-time">23:00</div>
                         <h3 class="timeline-title">Торт</h3>
-                        <div class="timeline-desc">Вынос свадебного торта, десерты</div>
+                        <div class="timeline-desc">Вынос свадебного торта</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- ⭐⭐⭐ КАЛЕНДАРЬ АР-ДЕКО ⭐⭐⭐ -->
+    <!-- ⭐⭐⭐ КАЛЕНДАРЬ С ЗОЛОТЫМ СЕРДЕЧКОМ ⭐⭐⭐ -->
     <section class="calendar-section section">
         <div class="container">
             <h2 class="section-title">Календарь</h2>
@@ -1128,7 +1093,8 @@
                         <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div>
                         <div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div>
                         <div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day highlight">26</div>
+                        <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div>
+                        <div class="calendar-day highlight"><span>26</span></div>
                         <div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day"></div><div class="calendar-day"></div>
                     </div>
                     
@@ -1282,7 +1248,7 @@
         <div class="footer-quote">Элегантность вне времени</div>
     </footer>
     
-    <!-- МУЗЫКА -->
+    <!-- ⭐ НОВАЯ МУЗЫКА ⭐ -->
     <div class="music-player">
         <button class="music-btn" id="musicToggle">
             <i class="fas fa-music"></i>
@@ -1293,12 +1259,10 @@
     </div>
     
     <script>
-        // ТАЙМЕР
         function updateTimer() {
             const wedding = new Date('2026-06-26T18:00:00').getTime();
             const now = new Date().getTime();
             const diff = wedding - now;
-            
             document.getElementById('days').textContent = Math.floor(diff/(1000*60*60*24)).toString().padStart(2,'0');
             document.getElementById('hours').textContent = Math.floor((diff%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
             document.getElementById('minutes').textContent = Math.floor((diff%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
@@ -1338,7 +1302,6 @@
             isPlaying = !isPlaying;
         });
         
-        // АВТОСТАРТ
         window.addEventListener('load', () => {
             music.play().then(() => {
                 isPlaying = true;
@@ -1347,14 +1310,14 @@
             }).catch(() => {});
         });
         
-        // ⭐ ФОРМА — ВСТАВЬ СВОЮ ССЫЛКУ НА APPS SCRIPT ⭐
+        // ФОРМА
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/ВАША_ССЫЛКА/exec';
         
         document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            
             const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Отправка...';
+            submitBtn.disabled = true;
             
             const diet = [];
             if (document.getElementById('diet1').checked) diet.push('Вегетарианское');
@@ -1370,9 +1333,6 @@
                 wedding: 'Ар-деко свадьба 26.06.2026'
             };
             
-            submitBtn.innerHTML = 'Отправка...';
-            submitBtn.disabled = true;
-            
             try {
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -1380,24 +1340,12 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
-                
-                document.getElementById('formResponse').innerHTML = `
-                    <div style="color: #bf9e5f; padding: 15px; border: 1px solid #bf9e5f;">
-                        <i class="fas fa-check-circle"></i> Спасибо, ${formData.name}! Ждем вас ✨
-                    </div>
-                `;
-                
+                document.getElementById('formResponse').innerHTML = '<div style="color: #b5975b;">Спасибо! Ждем вас ✨</div>';
                 this.reset();
-                
             } catch (error) {
-                document.getElementById('formResponse').innerHTML = `
-                    <div style="color: #b85c38; padding: 15px; border: 1px solid #b85c38;">
-                        <i class="fas fa-exclamation-triangle"></i> Ошибка. Позвоните нам.
-                    </div>
-                `;
+                document.getElementById('formResponse').innerHTML = '<div style="color: #b85c38;">Ошибка. Позвоните нам.</div>';
             }
-            
-            submitBtn.innerHTML = originalText;
+            submitBtn.innerHTML = 'ОТПРАВИТЬ';
             submitBtn.disabled = false;
         });
     </script>
