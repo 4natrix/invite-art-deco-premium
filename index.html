@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>Айбек & Айгерим | Ар-деко премиум</title>
+    <!-- ⭐ ПРЕМИАЛЬНЫЕ ШРИФТЫ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -30,7 +31,7 @@
             position: relative;
         }
         
-        /* Геометрический фон */
+        /* ⭐ Геометрический фон Ар-деко */
         body::before {
             content: '';
             position: fixed;
@@ -96,12 +97,12 @@
             margin-bottom: 20px;
             color: #bf9e5f;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 500;
         }
         
         .hero-names {
             font-size: clamp(3rem, 10vw, 5.5rem);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
             display: flex;
@@ -115,6 +116,7 @@
             font-size: clamp(2rem, 7vw, 4rem);
             color: #bf9e5f;
             font-weight: 400;
+            font-style: italic;
         }
         
         .hero-date {
@@ -183,7 +185,7 @@
         
         .section-title {
             font-size: clamp(2rem, 6vw, 3rem);
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 10px;
             color: #1a1a1a;
@@ -208,7 +210,7 @@
             margin: 0 auto 50px;
         }
         
-        /* ⭐⭐⭐ ГАЛЕРЕЯ (ФОТО В СТИЛЕ АР-ДЕКО) ⭐⭐⭐ */
+        /* ⭐⭐⭐ ГАЛЕРЕЯ АР-ДЕКО ⭐⭐⭐ */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -260,7 +262,7 @@
             }
         }
         
-        /* ⭐⭐⭐ ПРОГРАММА (СЛЕВА/СПРАВА) ⭐⭐⭐ */
+        /* ⭐⭐⭐ ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА (ИСПРАВЛЕНО) ⭐⭐⭐ */
         .timeline-section {
             background: #fafafa;
         }
@@ -270,13 +272,13 @@
             margin: 40px auto 0;
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 40px;
         }
         
         .timeline-row {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 40px;
         }
         
         .timeline-row.reverse {
@@ -284,9 +286,8 @@
         }
         
         .timeline-image {
-            flex: 0 0 120px;
-            height: 120px;
-            border-radius: 0;
+            flex: 0 0 150px;
+            height: 150px;
             background-size: cover;
             background-position: center;
             border: 2px solid #bf9e5f;
@@ -310,36 +311,75 @@
         }
         
         .timeline-time {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #bf9e5f;
             font-weight: 600;
             margin-bottom: 5px;
+            font-family: 'Inter', 'Arial', sans-serif;
         }
         
         .timeline-title {
-            font-size: 1.6rem;
-            margin-bottom: 5px;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
             font-weight: 600;
+            font-style: italic;
         }
         
         .timeline-desc {
             color: #666;
             font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* ⭐⭐ АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНА — СОХРАНЯЕМ СЛЕВА/СПРАВА ⭐⭐ */
+        @media (max-width: 768px) {
+            .timeline-row,
+            .timeline-row.reverse {
+                gap: 20px;
+            }
+            
+            .timeline-image {
+                flex: 0 0 100px;
+                height: 100px;
+            }
+            
+            .timeline-title {
+                font-size: 1.4rem;
+            }
+            
+            .timeline-time {
+                font-size: 1.1rem;
+            }
+            
+            .timeline-desc {
+                font-size: 0.9rem;
+            }
         }
         
         @media (max-width: 600px) {
             .timeline-row,
             .timeline-row.reverse {
-                flex-direction: column;
-                text-align: center;
+                gap: 15px;
             }
+            
             .timeline-image {
-                flex: 0 0 100px;
-                width: 100px;
+                flex: 0 0 80px;
+                height: 80px;
             }
         }
         
-        /* ⭐⭐⭐ КАЛЕНДАРЬ (АР-ДЕКО СТИЛЬ) ⭐⭐⭐ */
+        @media (max-width: 480px) {
+            .timeline-image {
+                flex: 0 0 70px;
+                height: 70px;
+            }
+            
+            .timeline-title {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* ⭐⭐⭐ КАЛЕНДАРЬ АР-ДЕКО ⭐⭐⭐ */
         .calendar-section {
             background: white;
         }
@@ -349,18 +389,20 @@
             margin: 0 auto;
             text-align: center;
             border: 2px solid #bf9e5f;
-            padding: 40px 30px;
+            padding: 50px 40px;
             background: white;
             position: relative;
         }
         
+        /* Декоративные углы Ар-деко */
         .calendar-container::before,
         .calendar-container::after {
             content: '';
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: 60px;
             border: 2px solid #bf9e5f;
+            opacity: 0.5;
         }
         
         .calendar-container::before {
@@ -377,17 +419,48 @@
             border-top: none;
         }
         
+        /* Внутренняя рамка */
+        .calendar-inner {
+            position: relative;
+            padding: 20px;
+        }
+        
+        .calendar-inner::before,
+        .calendar-inner::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba(191, 158, 95, 0.3);
+        }
+        
+        .calendar-inner::before {
+            top: 0;
+            left: 0;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .calendar-inner::after {
+            bottom: 0;
+            right: 0;
+            border-left: none;
+            border-top: none;
+        }
+        
         .calendar-date {
             font-size: 4rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #bf9e5f;
             line-height: 1;
+            margin-bottom: 5px;
         }
         
         .calendar-month {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: #1a1a1a;
             margin-bottom: 30px;
+            font-style: italic;
         }
         
         .calendar-weekdays {
@@ -398,6 +471,8 @@
             font-weight: 600;
             color: #bf9e5f;
             margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
         
         .calendar-days {
@@ -408,12 +483,30 @@
         }
         
         .calendar-day {
-            padding: 5px;
+            padding: 8px 5px;
+            font-size: 0.9rem;
         }
         
         .calendar-day.highlight {
             background: #bf9e5f;
             color: white;
+            border-radius: 0;
+            font-weight: 600;
+        }
+        
+        .calendar-time-info {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-around;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .calendar-time-info span {
+            color: #bf9e5f;
+            font-weight: 600;
         }
         
         /* ⭐⭐⭐ ДРЕСС-КОД ⭐⭐⭐ */
@@ -432,7 +525,7 @@
         .dresscode-card {
             flex: 0 1 300px;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 30px;
             border: 2px solid #bf9e5f;
             background: white;
             position: relative;
@@ -449,99 +542,23 @@
             pointer-events: none;
         }
         
-        .dresscode-card i {
+        .dresscode-icon {
             font-size: 3rem;
             color: #bf9e5f;
             margin-bottom: 20px;
         }
         
         .dresscode-card h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 10px;
+            font-weight: 600;
+            font-style: italic;
         }
         
         .dresscode-card p {
             color: #666;
             font-size: 1.1rem;
-        }
-        
-        /* ⭐⭐⭐ ФОРМА ⭐⭐⭐ */
-        .form-section {
-            background: white;
-        }
-        
-        .form-container {
-            max-width: 550px;
-            margin: 0 auto;
-            padding: 50px 40px;
-            border: 2px solid #bf9e5f;
-            background: white;
-            position: relative;
-        }
-        
-        .form-container::before {
-            content: '';
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            right: 5px;
-            bottom: 5px;
-            border: 1px solid rgba(191, 158, 95, 0.2);
-            pointer-events: none;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e8e8e8;
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #bf9e5f;
-        }
-        
-        .checkbox-group {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin: 15px 0;
-        }
-        
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'Inter', 'Arial', sans-serif;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: #1a1a1a;
-            color: white;
-            border: 2px solid #bf9e5f;
-            font-family: 'Inter', 'Arial', sans-serif;
-            font-size: 1.2rem;
-            cursor: pointer;
-            letter-spacing: 4px;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: #bf9e5f;
-            color: #1a1a1a;
+            line-height: 1.6;
         }
         
         /* ⭐⭐⭐ МЕСТО ПРОВЕДЕНИЯ ⭐⭐⭐ */
@@ -553,7 +570,7 @@
             text-align: center;
             margin-bottom: 40px;
             border: 2px solid #bf9e5f;
-            padding: 40px;
+            padding: 50px 40px;
             background: white;
             position: relative;
         }
@@ -566,6 +583,26 @@
             right: 5px;
             bottom: 5px;
             border: 1px solid rgba(191, 158, 95, 0.2);
+        }
+        
+        .venue-name {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .venue-address {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .venue-time {
+            color: #bf9e5f;
+            font-size: 1rem;
+            font-family: 'Inter', 'Arial', sans-serif;
+            letter-spacing: 2px;
         }
         
         .map-container {
@@ -598,6 +635,8 @@
             text-decoration: none;
             color: #1a1a1a;
             transition: all 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         
         .map-btn:hover {
@@ -605,7 +644,106 @@
             color: white;
         }
         
-        /* ⭐⭐⭐ КОНТАКТЫ ⭐⭐⭐ */
+        /* ⭐⭐⭐ ФОРМА АР-ДЕКО ⭐⭐⭐ */
+        .form-section {
+            background: white;
+        }
+        
+        .form-container {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            border: 2px solid #bf9e5f;
+            background: white;
+            position: relative;
+        }
+        
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 1px solid rgba(191, 158, 95, 0.2);
+            pointer-events: none;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            font-family: 'Inter', 'Arial', sans-serif;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e8e8e8;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #fafafa;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #bf9e5f;
+            background: white;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 15px 0 20px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #bf9e5f;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #1a1a1a;
+            color: white;
+            border: 2px solid #bf9e5f;
+            font-family: 'Inter', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            letter-spacing: 4px;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: #bf9e5f;
+            color: #1a1a1a;
+        }
+        
+        /* ⭐⭐⭐ КОНТАКТЫ АР-ДЕКО ⭐⭐⭐ */
         .contact-section {
             background: #fafafa;
         }
@@ -621,7 +759,7 @@
         .contact-card {
             text-align: center;
             flex: 0 1 280px;
-            padding: 30px 20px;
+            padding: 40px 30px;
             border: 2px solid #bf9e5f;
             background: white;
             position: relative;
@@ -638,8 +776,10 @@
         }
         
         .contact-card h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 5px;
+            font-weight: 600;
+            font-style: italic;
         }
         
         .contact-role {
@@ -647,11 +787,13 @@
             margin-bottom: 15px;
             font-family: 'Inter', 'Arial', sans-serif;
             letter-spacing: 2px;
+            font-size: 0.8rem;
         }
         
         .contact-phone {
             font-size: 1.2rem;
             margin-bottom: 20px;
+            font-family: 'Inter', 'Arial', sans-serif;
         }
         
         .contact-wa {
@@ -663,6 +805,7 @@
             border: 2px solid #bf9e5f;
             font-family: 'Inter', 'Arial', sans-serif;
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
         
         .contact-wa:hover {
@@ -672,21 +815,22 @@
         
         .contact-organizer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             padding-top: 30px;
             border-top: 2px solid #bf9e5f;
         }
         
         .organizer-wa {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 35px;
             background: #1a1a1a;
             color: white;
             text-decoration: none;
             border: 2px solid #bf9e5f;
             font-family: 'Inter', 'Arial', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-top: 15px;
+            transition: all 0.3s;
         }
         
         .organizer-wa:hover {
@@ -704,9 +848,22 @@
         }
         
         .footer-names {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 15px;
             color: #bf9e5f;
+            font-weight: 600;
+            font-style: italic;
+        }
+        
+        .footer-date {
+            font-family: 'Inter', 'Arial', sans-serif;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+        
+        .footer-quote {
+            font-style: italic;
+            color: rgba(191, 158, 95, 0.8);
         }
         
         /* ⭐⭐⭐ КРУГЛАЯ КНОПКА МУЗЫКИ ⭐⭐⭐ */
@@ -743,9 +900,41 @@
             display: none;
         }
         
+        /* ⭐⭐⭐ АДАПТИВНОСТЬ ⭐⭐⭐ */
+        @media (max-width: 768px) {
+            .hero-names {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .form-container {
+                padding: 40px 30px;
+            }
+            
+            .calendar-container {
+                padding: 40px 30px;
+            }
+            
+            .calendar-date {
+                font-size: 3rem;
+            }
+            
+            .calendar-month {
+                font-size: 1.6rem;
+            }
+            
+            .contact-grid {
+                gap: 30px;
+            }
+        }
+        
         @media (max-width: 600px) {
             .hero-names {
                 flex-direction: column;
+                gap: 0;
             }
             
             .hero-and {
@@ -761,8 +950,14 @@
                 justify-content: center;
             }
             
-            .rsvp-button {
+            .contact-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-card {
                 width: 100%;
+                max-width: 300px;
             }
             
             .music-player {
@@ -776,19 +971,28 @@
                 font-size: 1.2rem;
             }
             
-            .contact-grid {
-                gap: 30px;
+            .checkbox-group {
+                flex-direction: column;
+                gap: 10px;
             }
             
-            .contact-card {
-                flex: 0 1 100%;
+            .calendar-time-info {
+                flex-direction: column;
+                gap: 10px;
             }
         }
         
         @media (max-width: 480px) {
             html { font-size: 14px; }
             .hero-names { font-size: 2.5rem; }
-            .calendar-date { font-size: 3rem; }
+            .venue-name { font-size: 1.8rem; }
+            .calendar-date { font-size: 2.5rem; }
+            .calendar-month { font-size: 1.4rem; }
+        }
+        
+        h1, h2, h3, p, div, span, a {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
     </style>
 </head>
@@ -834,7 +1038,7 @@
         </div>
     </section>
     
-    <!-- ПРОГРАММА -->
+    <!-- ⭐⭐⭐ ПРОГРАММА ДНЯ — СЛЕВА/СПРАВА ⭐⭐⭐ -->
     <section class="timeline-section section">
         <div class="container">
             <h2 class="section-title">Программа дня</h2>
@@ -842,48 +1046,96 @@
             <div class="section-divider"></div>
             
             <div class="timeline-grid">
+                <!-- 1. Сбор гостей - слева -->
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">18:00</div><div class="timeline-title">Сбор гостей</div><div class="timeline-desc">Приветственный фуршет</div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">18:00</div>
+                        <h3 class="timeline-title">Сбор гостей</h3>
+                        <div class="timeline-desc">Приветственный фуршет, шампанское, первые встречи</div>
+                    </div>
                 </div>
+                
+                <!-- 2. Фотосессия - справа -->
                 <div class="timeline-row reverse">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">19:00</div><div class="timeline-title">Церемония</div><div class="timeline-desc">Обмен кольцами</div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">18:30</div>
+                        <h3 class="timeline-title">Фотосессия</h3>
+                        <div class="timeline-desc">Совместные фотографии в интерьерах отеля</div>
+                    </div>
                 </div>
+                
+                <!-- 3. Торжественная церемония - слева -->
                 <div class="timeline-row">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">20:00</div><div class="timeline-title">Банкет</div><div class="timeline-desc">Ужин</div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">19:00</div>
+                        <h3 class="timeline-title">Церемония</h3>
+                        <div class="timeline-desc">Обмен кольцами, первые поздравления</div>
+                    </div>
                 </div>
+                
+                <!-- 4. Банкет - справа -->
                 <div class="timeline-row reverse">
-                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">22:00</div><div class="timeline-title">Танцы</div><div class="timeline-desc">DJ</div></div>
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=200');"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">20:00</div>
+                        <h3 class="timeline-title">Банкет</h3>
+                        <div class="timeline-desc">Ужин в стиле Ар-деко, тосты, поздравления</div>
+                    </div>
                 </div>
+                
+                <!-- 5. Танцы - слева -->
                 <div class="timeline-row">
+                    <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=200');"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">22:00</div>
+                        <h3 class="timeline-title">Танцы</h3>
+                        <div class="timeline-desc">Первый танец, дискотека, джаз</div>
+                    </div>
+                </div>
+                
+                <!-- 6. Торт - справа -->
+                <div class="timeline-row reverse">
                     <div class="timeline-image" style="background-image: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=200');"></div>
-                    <div class="timeline-content"><div class="timeline-time">23:00</div><div class="timeline-title">Торт</div><div class="timeline-desc">Свадебный торт</div></div>
+                    <div class="timeline-content">
+                        <div class="timeline-time">23:00</div>
+                        <h3 class="timeline-title">Торт</h3>
+                        <div class="timeline-desc">Вынос свадебного торта, десерты</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- КАЛЕНДАРЬ -->
+    <!-- ⭐⭐⭐ КАЛЕНДАРЬ АР-ДЕКО ⭐⭐⭐ -->
     <section class="calendar-section section">
         <div class="container">
             <h2 class="section-title">Календарь</h2>
             <div class="section-subtitle">DATE</div>
             <div class="section-divider"></div>
             <div class="calendar-container">
-                <div class="calendar-date">26</div>
-                <div class="calendar-month">ИЮНЯ 2026</div>
-                <div class="calendar-weekdays">
-                    <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
-                </div>
-                <div class="calendar-days">
-                    <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div>
-                    <div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div>
-                    <div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
-                    <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day highlight">26</div>
-                    <div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day"></div><div class="calendar-day"></div>
+                <div class="calendar-inner">
+                    <div class="calendar-date">26</div>
+                    <div class="calendar-month">ИЮНЯ 2026</div>
+                    
+                    <div class="calendar-weekdays">
+                        <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+                    </div>
+                    
+                    <div class="calendar-days">
+                        <div class="calendar-day"></div><div class="calendar-day"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div>
+                        <div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day highlight">26</div>
+                        <div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day"></div><div class="calendar-day"></div>
+                    </div>
+                    
+                    <div class="calendar-time-info">
+                        <div><span>Сбор гостей</span> 18:00</div>
+                        <div><span>Церемония</span> 19:00</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -897,14 +1149,14 @@
             <div class="section-divider"></div>
             <div class="dresscode-grid">
                 <div class="dresscode-card">
-                    <i class="fas fa-user-tie"></i>
+                    <div class="dresscode-icon"><i class="fas fa-user-tie"></i></div>
                     <h3>Мужчины</h3>
-                    <p>Классические костюмы<br>Черный/серый</p>
+                    <p>Классические костюмы<br>Черный, серый, темно-синий<br>Бабочка или галстук</p>
                 </div>
                 <div class="dresscode-card">
-                    <i class="fas fa-female"></i>
+                    <div class="dresscode-icon"><i class="fas fa-female"></i></div>
                     <h3>Дамы</h3>
-                    <p>Вечерние платья<br>Длинные, элегантные</p>
+                    <p>Вечерние платья<br>Длинные, элегантные<br>Золотые аксессуары</p>
                 </div>
             </div>
         </div>
@@ -920,7 +1172,7 @@
             <div class="venue-card">
                 <div class="venue-name">ОТЕЛЬ «РОЯЛЬ»</div>
                 <div class="venue-address">г. Алматы, пр. Достык, 150</div>
-                <div class="venue-time">СБОР ГОСТЕЙ В 18:00</div>
+                <div class="venue-time">НАЧАЛО В 18:00</div>
             </div>
             
             <div class="map-container">
@@ -928,8 +1180,8 @@
             </div>
             
             <div class="map-buttons">
-                <a href="https://yandex.ru/maps/?text=Алматы%20Достык%20150" target="_blank" class="map-btn"><i class="fas fa-map"></i> Яндекс</a>
-                <a href="https://www.google.com/maps/search/?api=1&query=Достык+150+Алматы" target="_blank" class="map-btn"><i class="fab fa-google"></i> Google</a>
+                <a href="https://yandex.ru/maps/?text=Алматы%20Достык%20150" target="_blank" class="map-btn"><i class="fas fa-map"></i> Яндекс Карты</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Достык+150+Алматы" target="_blank" class="map-btn"><i class="fab fa-google"></i> Google Maps</a>
                 <a href="https://2gis.kz/almaty/search/Достык%20150" target="_blank" class="map-btn"><i class="fas fa-location-dot"></i> 2GIS</a>
             </div>
         </div>
@@ -945,29 +1197,50 @@
             <div class="form-container">
                 <form id="rsvpForm">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="Ваше имя и фамилия *" required>
+                        <label>Ваше имя и фамилия *</label>
+                        <input type="text" id="name" required placeholder="Иванов Иван">
                     </div>
+                    
                     <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Номер телефона *" required>
+                        <label>Номер телефона *</label>
+                        <input type="tel" id="phone" required placeholder="+7 (777) 123-45-67">
                     </div>
+                    
                     <div class="form-group">
-                        <select id="guests">
-                            <option>1 гость</option>
-                            <option>2 гостя</option>
-                            <option>3 гостя</option>
-                            <option>4+</option>
+                        <label>Количество гостей *</label>
+                        <select id="guests" required>
+                            <option value="" disabled selected>— Выберите —</option>
+                            <option value="1">1 гость</option>
+                            <option value="2">2 гостя</option>
+                            <option value="3">3 гостя</option>
+                            <option value="4">4 и более</option>
                         </select>
                     </div>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label"><input type="checkbox" id="diet1" value="veg"> Вегетарианское</label>
-                        <label class="checkbox-label"><input type="checkbox" id="diet2" value="allergy"> Аллергия</label>
-                    </div>
+                    
                     <div class="form-group">
-                        <textarea id="message" placeholder="Пожелания"></textarea>
+                        <label>Особые пожелания</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="diet1" value="veg"> Вегетарианское
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="diet2" value="allergy"> Аллергия
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="diet3" value="halal"> Халяльное
+                            </label>
+                        </div>
                     </div>
+                    
+                    <div class="form-group">
+                        <label>Пожелания</label>
+                        <textarea id="message" rows="3" placeholder="Напишите свои пожелания..."></textarea>
+                    </div>
+                    
                     <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
                 </form>
-                <div id="formResponse" style="margin-top: 20px;"></div>
+                
+                <div id="formResponse" style="margin-top: 20px; text-align: center;"></div>
             </div>
         </div>
     </section>
@@ -986,6 +1259,7 @@
                     <div class="contact-phone">+7 (777) 111-22-33</div>
                     <a href="https://wa.me/77771112233" target="_blank" class="contact-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
+                
                 <div class="contact-card">
                     <h3>Айгерим</h3>
                     <div class="contact-role">НЕВЕСТА</div>
@@ -995,7 +1269,7 @@
             </div>
             
             <div class="contact-organizer">
-                <p>Организатор: Айгуль</p>
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">Организатор — Айгуль</p>
                 <a href="https://wa.me/77771234567" target="_blank" class="organizer-wa"><i class="fab fa-whatsapp"></i> +7 (777) 123-45-67</a>
             </div>
         </div>
@@ -1004,8 +1278,8 @@
     <!-- ФУТЕР -->
     <footer>
         <div class="footer-names">АЙБЕК ✦ АЙГЕРИМ</div>
-        <div>26 июня 2026 • Алматы</div>
-        <div style="margin-top: 30px;">Элегантность вне времени</div>
+        <div class="footer-date">26 июня 2026 • Алматы</div>
+        <div class="footer-quote">Элегантность вне времени</div>
     </footer>
     
     <!-- МУЗЫКА -->
@@ -1019,10 +1293,12 @@
     </div>
     
     <script>
+        // ТАЙМЕР
         function updateTimer() {
             const wedding = new Date('2026-06-26T18:00:00').getTime();
             const now = new Date().getTime();
             const diff = wedding - now;
+            
             document.getElementById('days').textContent = Math.floor(diff/(1000*60*60*24)).toString().padStart(2,'0');
             document.getElementById('hours').textContent = Math.floor((diff%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
             document.getElementById('minutes').textContent = Math.floor((diff%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
@@ -1062,6 +1338,7 @@
             isPlaying = !isPlaying;
         });
         
+        // АВТОСТАРТ
         window.addEventListener('load', () => {
             music.play().then(() => {
                 isPlaying = true;
@@ -1070,18 +1347,19 @@
             }).catch(() => {});
         });
         
-        // ФОРМА (ДЛЯ GOOGLE APPS SCRIPT)
+        // ⭐ ФОРМА — ВСТАВЬ СВОЮ ССЫЛКУ НА APPS SCRIPT ⭐
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/ВАША_ССЫЛКА/exec';
         
         document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
             e.preventDefault();
+            
             const submitBtn = this.querySelector('.submit-btn');
-            submitBtn.innerHTML = 'Отправка...';
-            submitBtn.disabled = true;
+            const originalText = submitBtn.innerHTML;
             
             const diet = [];
             if (document.getElementById('diet1').checked) diet.push('Вегетарианское');
             if (document.getElementById('diet2').checked) diet.push('Аллергия');
+            if (document.getElementById('diet3').checked) diet.push('Халяльное');
             
             const formData = {
                 name: document.getElementById('name').value,
@@ -1092,6 +1370,9 @@
                 wedding: 'Ар-деко свадьба 26.06.2026'
             };
             
+            submitBtn.innerHTML = 'Отправка...';
+            submitBtn.disabled = true;
+            
             try {
                 await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -1099,12 +1380,24 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
-                document.getElementById('formResponse').innerHTML = '<div style="color: #bf9e5f;">Спасибо! Ждем вас ✨</div>';
+                
+                document.getElementById('formResponse').innerHTML = `
+                    <div style="color: #bf9e5f; padding: 15px; border: 1px solid #bf9e5f;">
+                        <i class="fas fa-check-circle"></i> Спасибо, ${formData.name}! Ждем вас ✨
+                    </div>
+                `;
+                
                 this.reset();
+                
             } catch (error) {
-                document.getElementById('formResponse').innerHTML = '<div style="color: #b85c38;">Ошибка. Позвоните нам.</div>';
+                document.getElementById('formResponse').innerHTML = `
+                    <div style="color: #b85c38; padding: 15px; border: 1px solid #b85c38;">
+                        <i class="fas fa-exclamation-triangle"></i> Ошибка. Позвоните нам.
+                    </div>
+                `;
             }
-            submitBtn.innerHTML = 'ОТПРАВИТЬ';
+            
+            submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         });
     </script>
